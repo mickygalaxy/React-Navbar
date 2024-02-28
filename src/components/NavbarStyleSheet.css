@@ -1,0 +1,135 @@
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #D8C1FC;
+    padding: 20px 80px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+}
+#nav-right-part-ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#nav-right-part-ul li{
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+    transition: 0.3s ease-in-out;
+}
+
+#nav-right-part-ul li a{
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color:#ffff;
+}
+
+#nav-right-part-ul li a:hover,#nav-right-part-ul li a.active:hover{
+    color: #020000a2;
+}
+
+#nav-right-part-ul li a:hover:after,#nav-right-part-ul li a.active::after{
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: #ffff;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+
+.mobile{
+    display: none;
+}
+
+.mobile i{
+    color: #ffff;
+}
+
+.logo{
+    width: 220px;
+}
+
+@media screen and (max-width:769px){
+    #nav-right-part-ul{
+        display: flex;
+        flex-direction:column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top:115px; /* top = 90px  */
+        right:-320px;
+        width:300px;
+        height:100vh;
+        background-color: #efdefc;
+        box-shadow: 0 40px 60px rgba(0, 0, 0, 0.60);
+        border-radius: 15px;
+        padding: 40px 0 0 10px;
+        transition: 0.3s ease-in-out;
+    }
+
+    #nav-right-part-ul.active{
+        right:1px;
+    }
+
+    #nav-right-part-ul li{
+        margin-bottom:25px;
+    }
+
+    .mobile{
+        display: block;
+    }
+
+    .mobile{
+        font-size: 24px;
+        cursor: pointer;
+    }
+    
+}
+
+
+@media screen and (max-width:460px){
+    .img{
+      margin-left: -60px;
+      width: 180px;
+    }
+    .mobile{
+      margin-right: -45px;
+    }
+
+
+    @media screen and (min-width:360px) and (max-width:460px){
+        .img{
+          margin-left: -60px;
+          width: 180px;
+        }
+        .mobile{
+          margin-right: -50px;
+        }
+
+        
+    }
+
+    @media screen and (max-width:360px) and (min-width:300px){
+        .img{
+          margin-left: -60px;
+          width: 20px;
+        }
+        .mobile{
+          margin-right: -60px;
+        }
+
+        #nav-right-part-ul.active{
+            right:-80px;
+        }
+    }
+
+    
+
+}
+
+
+
